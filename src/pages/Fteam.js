@@ -1,68 +1,57 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Fside from '../components/Fside';
 import Fhead from '../components/Fhead';
+import playerData from '../json/players'; // Import the players data
 
 function Fteams() {
-  const [playersByTeams, setPlayersByTeams] = useState([]);
-  const [selectedTeam, setSelectedTeam] = useState(null);
-  const [selectedTeamPlayers, setSelectedTeamPlayers] = useState([]);
+  const [selectedSport, setSelectedSport] = useState(null);
 
-  useEffect(() => {
-    // Fetch players grouped by teams and sports from the server
-    fetch('/get-players-by-teams')
-      .then((response) => response.json())
-      .then((data) => setPlayersByTeams(data))
-      .catch((error) => console.error(error));
-  }, []);
-
-  const handleTeamSelect = (teamId) => {
-    setSelectedTeam(teamId);
-
-    // Find the selected team's players from the fetched data
-    const teamData = playersByTeams.find((teamData) => teamData._id.team === teamId);
-    if (teamData) {
-      setSelectedTeamPlayers(teamData.players);
-    } else {
-      setSelectedTeamPlayers([]);
-    }
-  };
+  // Get a list of unique sports from the player data
+  const sports = [...new Set(playerData.map((player) => player.sport))];
 
   return (
     <div className="app">
       <Fside />
-        <div className="app-main">
-       <Fhead />
-       <div className="teamd">
+      <div className="app-main">
+        <Fhead />
+        <div className="teamd">
           <div className="teamdetails">
-      <h1 style={{fontFamily: "Footlight MT Light"}}>All Teams</h1>
-      <div className="teams-container">
-        <div className="teams-list">
-        <div>
-          {playersByTeams.map((teamData) => (
-            <div key={teamData._id.team} onClick={() => handleTeamSelect(teamData._id.team)} className="team-item">
-              {teamData._id.team} 
+            <h1 style={{ fontFamily: "Footlight MT Light" }}>All Teams</h1>
+            <div className="teams-container">
+              <div className="teams-list">
+                <div>
+                  {sports.map((sport) => (
+                    <div
+                      key={sport}
+                      onClick={() => setSelectedSport(sport)}
+                      className="team-item"
+                    >
+                      {sport}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="selected-team">
+                {selectedSport && (
+                  <div>
+                    <h3>Players in {selectedSport}</h3>
+                    <ul>
+                      {playerData
+                        .filter((player) => player.sport === selectedSport)
+                        .map((player) => (
+                          <li key={player._id["$oid"]}>
+                            {player.firstName} {player.lastName}
+                          </li>
+                        ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
             </div>
-          ))}
-        </div></div>
-        <div className="selected-team">
-        {selectedTeam && (
-          <div>
-            <h3>
-              Players of {selectedTeam} 
-            </h3>
-            
-            <h3>Players:</h3>
-                  <ul>
-                {selectedTeamPlayers.map((player) => (
-                  <li key={player._id}>
-                    <strong>Name:</strong>{player.firstName} {player.lastName}<br />
-                  </li>
-                ))}
-              </ul>
           </div>
-        )}
-      </div></div></div></div>
-    </div></div>
+        </div>
+      </div>
+    </div>
   );
 }
 

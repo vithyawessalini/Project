@@ -1,0 +1,811 @@
+[{
+  "_id": {
+    "$oid": "651c3fd6ef5e8e510c405a80"
+  },
+  "username": "Aadhya",
+  "id": "5001",
+  "email": "aadhya@gmail.com",
+  "password": "Aadhya@123",
+  "contactNumber": "9087654321",
+  "firstName": "Aadhya",
+  "lastName": "A",
+  "sport": "Football",
+  "position": "Forwards",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4017ef5e8e510c405a82"
+  },
+  "username": "Ananya",
+  "id": "5002",
+  "email": "ananya@gmail.com",
+  "password": "Ananya@123",
+  "contactNumber": "9087654322",
+  "firstName": "Ananya",
+  "lastName": "S",
+  "sport": "Football",
+  "position": "Defender",
+  "age": 14,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c406fef5e8e510c405a84"
+  },
+  "username": "Amala",
+  "id": "5003",
+  "email": "amala@gmail.com",
+  "password": "Amala@123",
+  "contactNumber": "9087654323",
+  "firstName": "Amala",
+  "lastName": "K",
+  "sport": "Football",
+  "position": "Midfielders",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4124ef5e8e510c405a86"
+  },
+  "username": "Oviya",
+  "id": "5004",
+  "email": "Oviya@gmail.com",
+  "password": "Oviya@123",
+  "contactNumber": "9087654324",
+  "firstName": "Oviya",
+  "lastName": "P",
+  "sport": "Football",
+  "position": "Goalkeeper",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c41c4ef5e8e510c405a88"
+  },
+  "username": "Vaishnavi",
+  "id": "5005",
+  "email": "vaishnavi@gmail.com",
+  "password": "Vaishnavi@123",
+  "contactNumber": "9087654325",
+  "firstName": "Vaishnavi",
+  "lastName": "R",
+  "sport": "Football",
+  "position": "Goalkeeper",
+  "age": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4237ef5e8e510c405a8a"
+  },
+  "username": "Vaasuki",
+  "id": "5006",
+  "email": "vaasuki@gmail.com",
+  "password": "Vaasuki@123",
+  "contactNumber": "9087654326",
+  "firstName": "Vaasuki",
+  "lastName": "M",
+  "sport": "Football",
+  "position": "Forwards",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4284ef5e8e510c405a8c"
+  },
+  "username": "Varshini",
+  "id": "5007",
+  "email": "varshini@gmail.com",
+  "password": "Varshini@123",
+  "contactNumber": "9087654327",
+  "firstName": "Varshini",
+  "lastName": "H",
+  "sport": "Football",
+  "position": "Defender",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c42f8ef5e8e510c405a8e"
+  },
+  "username": "Rachita",
+  "id": "5008",
+  "email": "rachita@gmail.com",
+  "password": "Rachita@123",
+  "contactNumber": "9087654328",
+  "firstName": "Rachita",
+  "lastName": "P",
+  "sport": "Football",
+  "position": "Defender",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4374ef5e8e510c405a90"
+  },
+  "username": "Rajashri",
+  "id": "5009",
+  "email": "rajashri@gmail.com",
+  "password": "Rajashri@123",
+  "contactNumber": "9087654329",
+  "firstName": "Rajashri",
+  "lastName": "S",
+  "sport": "Football",
+  "position": "Defender",
+  "age": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c43deef5e8e510c405a92"
+  },
+  "username": "Athira",
+  "id": "5010",
+  "email": "Athira@gmail.com",
+  "password": "Athira@123",
+  "contactNumber": "9987654321",
+  "firstName": "Athira",
+  "lastName": "K",
+  "sport": "Football",
+  "position": "Midfielders",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4420ef5e8e510c405a94"
+  },
+  "username": "Ramya",
+  "id": "5011",
+  "email": "ramya@gmail.com",
+  "password": "Ramya@123",
+  "contactNumber": "9876789001",
+  "firstName": "Ramya",
+  "lastName": "A",
+  "sport": "Football",
+  "position": "Midfielders",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4457ef5e8e510c405a96"
+  },
+  "username": "Renuka",
+  "id": "5012",
+  "email": "Renuka@gmail.com",
+  "password": "Renuka@123",
+  "contactNumber": "9876789002",
+  "firstName": "Renuka",
+  "lastName": "G",
+  "sport": "Football",
+  "position": "Forwards",
+  "age": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4497ef5e8e510c405a98"
+  },
+  "username": "Sriga",
+  "id": "5013",
+  "email": "Sriga@gmail.com",
+  "password": "Sriga@123",
+  "contactNumber": "9876789008",
+  "firstName": "Sriga",
+  "lastName": "T",
+  "sport": "Football",
+  "position": "Forwards",
+  "age": 13,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c44f1ef5e8e510c405a9a"
+  },
+  "username": "Reeta",
+  "id": "5014",
+  "email": "Reeta@gmail.com",
+  "password": "Reeta@123",
+  "contactNumber": "9876789007",
+  "firstName": "Reeta",
+  "lastName": "N",
+  "sport": "Football",
+  "position": "Midfielders",
+  "age": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c45c5ef5e8e510c405a9c"
+  },
+  "username": "Swetha",
+  "id": "5015",
+  "email": "swetha@gmail.com",
+  "password": "Swetha@123",
+  "contactNumber": "9876543299",
+  "firstName": "Swetha",
+  "lastName": "M",
+  "sport": "Basketball",
+  "position": "Point Guard",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4607ef5e8e510c405a9e"
+  },
+  "username": "Reena",
+  "id": "5016",
+  "email": "Reena@gmail.com",
+  "password": "Reena@123",
+  "contactNumber": "9876543287",
+  "firstName": "Reena",
+  "lastName": "G",
+  "sport": "Basketball",
+  "position": "shooting Guard",
+  "age": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c463eef5e8e510c405aa0"
+  },
+  "username": "Bavya",
+  "id": "5017",
+  "email": "Bavya@gmail.com",
+  "password": "Bavya@123",
+  "contactNumber": "9876543999",
+  "firstName": "Bavya",
+  "lastName": "C",
+  "sport": "Basketball",
+  "position": "Small Forward ",
+  "age": 17,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4680ef5e8e510c405aa2"
+  },
+  "username": "Rabia",
+  "id": "5018",
+  "email": "Rabia@gmail.com",
+  "password": "Rabia@123",
+  "contactNumber": "9876943221",
+  "firstName": "Rabia",
+  "lastName": "ST",
+  "sport": "Basketball",
+  "position": "Power Forward",
+  "age": 13,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c46baef5e8e510c405aa4"
+  },
+  "username": "Deepana",
+  "id": "5019",
+  "email": "Deepana@gmail.com",
+  "password": "Deepana@123",
+  "contactNumber": "9876543921",
+  "firstName": "Deepana",
+  "lastName": "SK",
+  "sport": "Basketball",
+  "position": "Center ",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4700ef5e8e510c405aa6"
+  },
+  "username": "Haritha",
+  "id": "5020",
+  "email": "Haritha@gmail.com",
+  "password": "Haritha@123",
+  "contactNumber": "9876543281",
+  "firstName": "Haritha",
+  "lastName": "D",
+  "sport": "Basketball",
+  "position": "Center ",
+  "age": 17,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c474cef5e8e510c405aa8"
+  },
+  "username": "Shreya",
+  "id": "5021",
+  "email": "Shreya@gmail.com",
+  "password": "Shreya@123",
+  "contactNumber": "9876543271",
+  "firstName": "Shreya",
+  "lastName": "L",
+  "sport": "Basketball",
+  "position": "shooting Guard",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4a7aef5e8e510c405aaa"
+  },
+  "username": "Rashmi",
+  "id": "5022",
+  "email": "Rashmi@gmail.com",
+  "password": "Rashmi@123",
+  "contactNumber": "9876548911",
+  "firstName": "Rashmi",
+  "lastName": "D",
+  "sport": "Baseball",
+  "position": "Pitcher",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4bcbef5e8e510c405aac"
+  },
+  "username": "Farhana",
+  "id": "5023",
+  "email": "Farhana@gmail.com",
+  "password": "Farhana@123",
+  "contactNumber": "9876547811",
+  "firstName": "Farhana",
+  "lastName": "F",
+  "sport": "Baseball",
+  "position": "Catcher ",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4c36ef5e8e510c405aaf"
+  },
+  "username": "Sahana",
+  "id": "5024",
+  "email": "Sahana@gmail.com",
+  "password": "Sahana@123",
+  "contactNumber": "9876543271",
+  "firstName": "Sahana",
+  "lastName": "S",
+  "sport": "Baseball",
+  "position": "First Baseman",
+  "age": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4c77ef5e8e510c405ab1"
+  },
+  "username": "Sanmathi",
+  "id": "5025",
+  "email": "Sanmathi@gmail.com",
+  "password": "Sanmathi@123",
+  "contactNumber": "9876543234",
+  "firstName": "Sanmathi",
+  "lastName": "K",
+  "sport": "Baseball",
+  "position": "Second Baseman",
+  "age": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4cb6ef5e8e510c405ab3"
+  },
+  "username": "Prathika",
+  "id": "5026",
+  "email": "Prathika@gmail.com",
+  "password": "Prathika@123",
+  "contactNumber": "9876543235",
+  "firstName": "Prathika",
+  "lastName": "V",
+  "sport": "Baseball",
+  "position": "Third Baseman ",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4cedef5e8e510c405ab5"
+  },
+  "username": "Pooja",
+  "id": "5027",
+  "email": "Pooja@gmail.com",
+  "password": "Pooja@123",
+  "contactNumber": "9876543254",
+  "firstName": "Pooja",
+  "lastName": "R",
+  "sport": "Baseball",
+  "position": "Shortstop",
+  "age": 17,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4d26ef5e8e510c405ab7"
+  },
+  "username": "Lavanya",
+  "id": "5028",
+  "email": "Lavanya@gmail.com",
+  "password": "Lavanya@123",
+  "contactNumber": "9876543254",
+  "firstName": "Lavanya",
+  "lastName": "V",
+  "sport": "Baseball",
+  "position": "Left Fielder",
+  "age": 14,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4d5eef5e8e510c405ab9"
+  },
+  "username": "Girisa",
+  "id": "5029",
+  "email": "girisa@gmail.com",
+  "password": "Girisa@123",
+  "contactNumber": "9876543262",
+  "firstName": "Girisa",
+  "lastName": "B",
+  "sport": "Baseball",
+  "position": "Center Fielder",
+  "age": 14,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4da2ef5e8e510c405abb"
+  },
+  "username": "Indhu",
+  "id": "5030",
+  "email": "Indhu@gmail.com",
+  "password": "Indhu@123",
+  "contactNumber": "9876789098",
+  "firstName": "Indhu",
+  "lastName": "P",
+  "sport": "Baseball",
+  "position": "Right Fielder",
+  "age": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4dfcef5e8e510c405abd"
+  },
+  "username": "Sharmi",
+  "id": "5031",
+  "email": "Sharmi@gmail.com",
+  "password": "Sharmi@123",
+  "contactNumber": "9876543299",
+  "firstName": "Sharmi",
+  "lastName": "C",
+  "sport": "Tennis",
+  "position": "Tennis",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4e27ef5e8e510c405abf"
+  },
+  "username": "Visnu",
+  "id": "5032",
+  "email": "visnu@gmail.com",
+  "password": "Visnu@123",
+  "contactNumber": "9876543288",
+  "firstName": "Visnu",
+  "lastName": "AP",
+  "sport": "Tennis",
+  "position": "Tennis",
+  "age": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4e84ef5e8e510c405ac1"
+  },
+  "username": "Rohita",
+  "id": "5033",
+  "email": "rohita@gmail.com",
+  "password": "Rohita@123",
+  "contactNumber": "9876543233",
+  "firstName": "Rohita",
+  "lastName": "K",
+  "sport": "Tennis",
+  "position": "Tennis",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4edcef5e8e510c405ac3"
+  },
+  "username": "Sheela",
+  "id": "5034",
+  "email": "Sheela@gmail.com",
+  "password": "Sheela@123",
+  "contactNumber": "9876543277",
+  "firstName": "Sheela",
+  "lastName": "G",
+  "sport": "Tennis",
+  "position": "Tennis",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4f41ef5e8e510c405ac5"
+  },
+  "username": "Neha",
+  "id": "5035",
+  "email": "Neha@gmail.com",
+  "password": "Neha@123",
+  "contactNumber": "9876789111",
+  "firstName": "Neha",
+  "lastName": "M",
+  "sport": "Volleyball",
+  "position": "Left-side Hitter",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c4f92ef5e8e510c405ac7"
+  },
+  "username": "Gaura",
+  "id": "5036",
+  "email": "Gaura@gmail.com",
+  "password": "Gaura@123",
+  "contactNumber": "9876543244",
+  "firstName": "Gaura",
+  "lastName": "R",
+  "sport": "Volleyball",
+  "position": "Middle Blocker",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c500cef5e8e510c405ac9"
+  },
+  "username": "Gautami",
+  "id": "5037",
+  "email": "gautami@gmail.com",
+  "password": "Gautami@123",
+  "contactNumber": "9876549999",
+  "firstName": "Gautami",
+  "lastName": "P",
+  "sport": "Volleyball",
+  "position": "Right-side Hitter",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c506eef5e8e510c405acb"
+  },
+  "username": "Harini",
+  "id": "5038",
+  "email": "Harini@gmail.com",
+  "password": "Harini\t@123",
+  "contactNumber": "9876543273",
+  "firstName": "Harini",
+  "lastName": "H",
+  "sport": "Volleyball",
+  "position": "Setter",
+  "age": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c50abef5e8e510c405acd"
+  },
+  "username": "Harsha",
+  "id": "5038",
+  "email": "Harsha@gmail.com",
+  "password": "Harsha@123",
+  "contactNumber": "9876543262",
+  "firstName": "Harsha",
+  "lastName": "I",
+  "sport": "Volleyball",
+  "position": "Libero",
+  "age": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c50f1ef5e8e510c405acf"
+  },
+  "username": "Harshini",
+  "id": "5040",
+  "email": "Harshini@gmail.com",
+  "password": "Harshini@123",
+  "contactNumber": "9876543261",
+  "firstName": "Harshini",
+  "lastName": "P",
+  "sport": "Volleyball",
+  "position": "Defensive Specialist",
+  "age": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c5199ef5e8e510c405ad1"
+  },
+  "username": "Ilakkiya",
+  "id": "5041",
+  "email": "Ilakkiya@gmail.com",
+  "password": "Ilakkiya@123",
+  "contactNumber": "9876543222",
+  "firstName": "Ilakkiya",
+  "lastName": "L",
+  "sport": "Hockey",
+  "position": "Goalkeeper",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c5202ef5e8e510c405ad3"
+  },
+  "username": "Indira",
+  "id": "5042",
+  "email": "Indira@gmail.com",
+  "password": "Indira@123",
+  "contactNumber": "9876543251",
+  "firstName": "Indira",
+  "lastName": "V",
+  "sport": "Hockey",
+  "position": "Defenders",
+  "age": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c5386ef5e8e510c405ad5"
+  },
+  "username": "Iniya",
+  "id": "5043",
+  "email": "Iniya@gmail.com",
+  "password": "Iniya@123",
+  "contactNumber": "9876546767",
+  "firstName": "Iniya",
+  "lastName": "K",
+  "sport": "Hockey",
+  "position": "Midfielders ",
+  "age": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c541eef5e8e510c405ad7"
+  },
+  "username": "Jamuna",
+  "id": "5044",
+  "email": "Jamuna@gmail.com",
+  "password": "Jamuna@123",
+  "contactNumber": "9876543296",
+  "firstName": "Jamuna",
+  "lastName": "S",
+  "sport": "Hockey",
+  "position": "Forwards",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c547cef5e8e510c405ad9"
+  },
+  "username": "Rithika",
+  "id": "5045",
+  "email": "Rithika@gmail.com",
+  "password": "Rithika@123",
+  "contactNumber": "9876543298",
+  "firstName": "Rithika",
+  "lastName": "J",
+  "sport": "Hockey",
+  "position": "Wingers",
+  "age": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c54c1ef5e8e510c405adb"
+  },
+  "username": "Kavya",
+  "id": "5046",
+  "email": "Kavya@gmail.com",
+  "password": "Kavya@123",
+  "contactNumber": "9876543296",
+  "firstName": "Kavya",
+  "lastName": "T",
+  "sport": "Hockey",
+  "position": "Center-Forward",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c559eef5e8e510c405add"
+  },
+  "username": "Teja",
+  "id": "5047",
+  "email": "Teja@gmail.com",
+  "password": "Teja@123",
+  "contactNumber": "9876543287",
+  "firstName": "Teja",
+  "lastName": "D",
+  "sport": "Cricket",
+  "position": "Batters",
+  "age": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c55dcef5e8e510c405adf"
+  },
+  "username": "Tejasri",
+  "id": "5048",
+  "email": "Tejasri@gmail.com",
+  "password": "Tejasri@123",
+  "contactNumber": "9876543271",
+  "firstName": "Tejasri",
+  "lastName": "K",
+  "sport": "Cricket",
+  "position": "Bowlers",
+  "age": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c5627ef5e8e510c405ae1"
+  },
+  "username": "Saranya",
+  "id": "5049",
+  "email": "Saranya@gmail.com",
+  "password": "Saranya@123",
+  "contactNumber": "9876543264",
+  "firstName": "Saranya",
+  "lastName": "A",
+  "sport": "Cricket",
+  "position": "All-Rounders",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c5691ef5e8e510c405ae6"
+  },
+  "username": "Kalai",
+  "id": "5050",
+  "email": "Kalai@gmail.com",
+  "password": "Kalai@123",
+  "contactNumber": "9876543298",
+  "firstName": "Kalai",
+  "lastName": "Y",
+  "sport": "Cricket",
+  "position": "Wicketkeeper",
+  "age": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c56c9ef5e8e510c405ae8"
+  },
+  "username": "Kajol",
+  "id": "5051",
+  "email": "Kajol@gmail.com",
+  "password": "Kajol@123",
+  "contactNumber": "9876543243",
+  "firstName": "Kajol",
+  "lastName": "K",
+  "sport": "Cricket",
+  "position": "Fielders",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c572bef5e8e510c405aea"
+  },
+  "username": "Nivya",
+  "id": "5052",
+  "email": "Nivya@gmail.com",
+  "password": "Nivya@123",
+  "contactNumber": "9876543209",
+  "firstName": "Nivya",
+  "lastName": "M",
+  "sport": "Swimming",
+  "position": "Swimming",
+  "age": 17,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c5765ef5e8e510c405aec"
+  },
+  "username": "Jaahnavi",
+  "id": "5053",
+  "email": "Jaahnavi@gmail.com",
+  "password": "Jaahnavi@123",
+  "contactNumber": "9876543282",
+  "firstName": "Jaahnavi",
+  "lastName": "S",
+  "sport": "Swimming",
+  "position": "Swimming",
+  "age": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c57b3ef5e8e510c405aee"
+  },
+  "username": "Revathi",
+  "id": "5054",
+  "email": "Revathi@gmail.com",
+  "password": "Revathi@123",
+  "contactNumber": "9876543200",
+  "firstName": "Revathi",
+  "lastName": "N",
+  "sport": "Swimming",
+  "position": "Swimming",
+  "age": 15,
+  "__v": 0
+}]

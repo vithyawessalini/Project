@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Cside from '../components/Cside';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import teamData from '../json/team';
 
 function Cteams() {
   const [selectedTeam, setSelectedTeam] = useState(null);
@@ -17,24 +18,19 @@ function Cteams() {
   const [addingPlayer, setAddingPlayer] = useState(false);
   const [isEditingTeam, setIsEditingTeam] = useState(false);
   const [editedTeam, setEditedTeam] = useState({});
-  const [teamsData, setTeamsData] = useState([]);
+  const [teamsData, setTeamsData] = useState(teamData);
   const [selectedTeamPlayers, setSelectedTeamPlayers] = useState([]);
 
   useEffect(() => {
     // Fetch players grouped by teams and sports from the server
-    fetch('/get-players-by-teams')
-      .then((response) => response.json())
-      .then((data) => {
-        // Ensure that data is fetched and setTeamsData is called
-        setTeamsData(data);
-      })
-      .catch((error) => console.error(error));
+    // Replace this with your actual data fetching code
+    // You can fetch data from an API or use the teamData imported from JSON
   }, []);
 
   const handleTeamSelect = (teamId) => {
     setSelectedTeam(teamId);
 
-    const teamData = teamsData.find((teamData) => teamData?._id?.team === teamId);
+    const teamData = teamsData.find((teamData) => teamData.id === teamId);
     if (teamData) {
       setSelectedTeamPlayers(teamData.players);
     } else {
@@ -50,17 +46,16 @@ function Cteams() {
     if (newTeamName.trim() === '' || newTeamId.trim() === '') {
       return;
     }
-  
+
     const newTeam = {
       id: newTeamId,
-      name: newTeamName, // Make sure to set the name
+      name: newTeamName,
       city: newTeamCity,
       captain: newTeamCaptain,
       players: [],
     };
-  
-    setTeamsData([...teamsData, newTeam]); // Update teamsData state
-  
+
+    setTeamsData([...teamsData, newTeam]);
     setNewTeamId('');
     setNewTeamName('');
     setNewTeamCity('');
@@ -68,7 +63,7 @@ function Cteams() {
     setSelectedTeam(newTeam.id);
     setAddingTeam(false);
   };
-  
+
   const handleAddPlayerClick = () => {
     setAddingPlayer(true);
   };
@@ -79,19 +74,17 @@ function Cteams() {
     }
 
     const updatedTeamsData = [...teamsData];
-
     const teamIndex = updatedTeamsData.findIndex((team) => team.id === selectedTeam);
 
     if (teamIndex !== -1) {
       updatedTeamsData[teamIndex].players.push({
         id: newPlayerId,
-        name: newPlayerName,
+        username: newPlayerName,
         position: newPlayerPosition,
       });
     }
 
-    setTeamsData(updatedTeamsData); // Update teamsData state
-
+    setTeamsData(updatedTeamsData);
     setNewPlayerId('');
     setNewPlayerName('');
     setNewPlayerPosition('');
@@ -111,8 +104,7 @@ function Cteams() {
       return team;
     });
 
-    setTeamsData(updatedTeamsData); // Update teamsData state
-
+    setTeamsData(updatedTeamsData);
     setIsEditingTeam(false);
     setEditedTeam({});
   };
@@ -167,64 +159,55 @@ function Cteams() {
             </div>
           )}
 
-          <ul>
-            {teamsData.map((team) => (
-              <li key={team?._id?.team} onClick={() => handleTeamSelect(team?._id?.team)}>
-                {isEditingTeam && editedTeam.id === team?._id?.team ? (
-                  <>
-                    <input
-                      type="text"
-                      placeholder="New Team ID"
-                      value={editedTeam.id}
-                      onChange={(e) => setEditedTeam({ ...editedTeam, id: e.target.value })}
-                    />&emsp;
-                    <input
-                      type="text"
-                      placeholder="New Team Name"
-                      value={editedTeam.name}
-                      onChange={(e) => setEditedTeam({ ...editedTeam, name: e.target.value })}
-                    />&emsp;
-                    <input
-                      type="text"
-                      placeholder="City"
-                      value={editedTeam.city}
-                      onChange={(e) => setEditedTeam({ ...editedTeam, city: e.target.value })}
-                    />&emsp;
-                    <input
-                      type="text"
-                      placeholder="Captain"
-                      value={editedTeam.captain}
-                      onChange={(e) => setEditedTeam({ ...editedTeam, captain: e.target.value })}
-                    />&emsp;
-                    <button onClick={handleSaveTeam}>Save</button>&emsp;
-                    <button onClick={handleCancelEdit}>Cancel</button>
-                  </>
-                ) : (
-                  <>
-                    {team?._id?.team}
-                    <span onClick={() => handleEditTeam(team)}>
-                      <FontAwesomeIcon icon={faEdit} />
-                    </span>
-                  </>
-                )}
-              </li>
-            ))}
-          </ul>
+          {teamsData.map((team) => (
+            <li key={team.id} onClick={() => handleTeamSelect(team.id)}>
+              {isEditingTeam && editedTeam.id === team.id ? (
+                // Editing mode
+                <>
+                  <input
+                    type="text"
+                    placeholder="New Team ID"
+                    value={editedTeam.id}
+                    onChange={(e) => setEditedTeam({ ...editedTeam, id: e.target.value })}
+                  />
+                  <input
+                    type="text"
+                    placeholder="New Team Name"
+                    value={editedTeam.name}
+                    onChange={(e) => setEditedTeam({ ...editedTeam, name: e.target.value })}
+                  />
+                  {/* ... Other inputs for editing ... */}
+                  <button onClick={handleSaveTeam}>Save</button>
+                  <button onClick={handleCancelEdit}>Cancel</button>
+                </>
+              ) : (
+                // Display mode
+                <>
+                  {team.sport}
+                  <span onClick={() => handleEditTeam(team)}>
+                    <FontAwesomeIcon icon={faEdit} />
+                  </span>
+                </>
+              )}
+            </li>
+          )
+        )}
 
           {selectedTeam && (
             <div>
               <h3>
-                Players of {teamsData.find((team) => team.id === selectedTeam)?.name}
+                Players of {teamsData.find((team) => team.id === selectedTeam)?.sport}
                 <span className="plus-icon" onClick={handleAddPlayerClick}>
                   +
                 </span>
               </h3>
 
-              <p>Team ID: {selectedTeam}</p>
+              <p>Team ID: {teamsData.find((team) => team.id === selectedTeam)?.sport}</p>
               <p>City: {teamsData.find((team) => team.id === selectedTeam)?.city}</p>
               {selectedTeamPlayers.length > 0 && (
-                <p>Captain: {selectedTeamPlayers[0].firstName}</p>
+                <p>Captain: {selectedTeamPlayers[0].username}</p>
               )}
+
 
               <table className="player-table">
                 <thead>
@@ -236,9 +219,9 @@ function Cteams() {
                 </thead>
                 <tbody>
                   {selectedTeamPlayers.map((player) => (
-                    <tr key={player._id}>
+                    <tr key={player.id}>
                       <td>{player.id}</td>
-                      <td>{player.firstName}</td>
+                      <td>{player.username}</td>
                       <td>{player.position}</td>
                     </tr>
                   ))}

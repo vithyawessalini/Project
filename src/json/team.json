@@ -1,117 +1,300 @@
 [
     {
-      "id": 1,
-      "name": "Football",
-      "city": "City A",
-      "captain": "Roshini",
+      "id": "team1",
+      "name": "Team 1",
+      "sport": "Football",
       "players": [
         {
-          "id": 101,
-          "name": "Abinaya",
-          "position": "Forward",
-          "teamId": 1
+          "id": "5001",
+          "username": "Aadhya",
+          "position": "Forwards",
+          "age": 15
         },
         {
-          "id": 102,
-          "name": "Ananya",
-          "position": "Midfielder",
-          "teamId": 1
+          "id": "5006",
+          "username": "Vaasuki",
+          "position": "Forwards",
+          "age": 15
         },
         {
-          "id": 103,
-          "name": "Athira",
+          "id": "5009",
+          "username": "Rajashri",
           "position": "Defender",
-          "teamId": 1
+          "age": 16
         },
         {
-          "id": 104,
-          "name": "Sunitha",
-          "position": "Forward",
-          "teamId": 1
-        },
-        {
-          "id": 105,
-          "name": "Saranya",
-          "position": "Midfielder",
-          "teamId": 1
-        },
-        {
-          "id": 106,
-          "name": "Pavni",
+          "id": "5002",
+          "username": "Ananya",
           "position": "Defender",
-          "teamId": 1
-        },{
-          "id": 107,
-          "name": "Latha",
-          "position": "Forward",
-          "teamId": 1
+          "age": 14
         },
         {
-          "id": 108,
-          "name": "Roshini",
-          "position": "Midfielder",
-          "teamId": 1
-        },
-        {
-          "id": 109,
-          "name": "Mahita",
+          "id": "5007",
+          "username": "Varshini",
           "position": "Defender",
-          "teamId": 1
+          "age": 15
         },
         {
-          "id": 110,
-          "name": "Swetha",
-          "position": "Forward",
-          "teamId": 1
-        },
-        {
-          "id": 111,
-          "name": "Rohita",
-          "position": "Midfielder",
-          "teamId": 1
-        },
-        {
-          "id": 112,
-          "name": "Renuka",
+          "id": "5008",
+          "username": "Rachita",
           "position": "Defender",
-          "teamId": 1
+          "age": 15
         },
         {
-          "id": 113,
-          "name": "Kavitha",
-          "position": "Forward",
-          "teamId": 1
+          "id": "5003",
+          "username": "Amala",
+          "position": "Midfielders",
+          "age": 15
         },
         {
-          "id": 114,
-          "name": "Kavya",
-          "position": "Midfielder",
-          "teamId": 1
+          "id": "5010",
+          "username": "Athira",
+          "position": "Midfielders",
+          "age": 15
         },
         {
-          "id": 115,
-          "name": "Namita",
-          "position": "Defender",
-          "teamId": 1
-        }
+          "id": "5011",
+          "username": "Ramya",
+          "position": "Midfielders",
+          "age": 15
+        },
+        {
+          "id": "5004",
+          "username": "Oviya",
+          "position": "Goalkeeper",
+          "age": 15
+        },
+        {
+          "id": "5005",
+          "username": "Vaishnavi",
+          "position": "Goalkeeper",
+          "age": 16
+        },
+        {
+            "id": "5012",
+            "username": "Renuka",
+            "position": "Forwards",
+            "age": 16
+          },
+          {
+            "id": "5013",
+            "username": "Sriga",
+            "position": "Forwards",
+            "age": 13
+          },
+          {
+            "id": "5014",
+            "username": "Reeta",
+            "position": "Midfielders",
+            "age": 16
+          }
       ]
     },
-    {
-      "id": 2,
-      "name": "Baseketball",
-      "city": "City B",
-      "captain": "Latha",
-      "players": [
-        { "id": 124, "name": "Latha", "position": "Forward" },
-        { "id": 125, "name": "Shreya", "position": "Midfielder" },
-        { "id": 126, "name": "Sharmi", "position": "Defender" },
-        { "id": 127, "name": "Megna", "position": "Forward" },
-        { "id": 128, "name": "Sri", "position": "Midfielder" },
-        { "id": 129, "name": "Joshni", "position": "Defender" },
-        { "id": 130, "name": "Sukitha", "position": "Forward" },
-        { "id": 131, "name": "Navanya", "position": "Midfielder" },
-        { "id": 132, "name": "Neha", "position": "Defender" }
-      ]
-    }
+    {"id": "team2",
+    "name": "Team 2",
+    "sport": "Baseketball",
+    "players":
+        [
+            {
+                
+                "username": "Swetha",
+                "id": "5015",
+                "position": "Point Guard",
+                "age": 15
+              },{
+                "username": "Reena",
+                "id": "5016",
+                "position": "shooting Guard",
+                "age": 16
+        
+              },{
+                
+                "username": "Bavya",
+                "id": "5017",
+                "position": "Small Forward ",
+                "age": 17
+              },{
+                "username": "Rabia",
+                "id": "5018",
+                "position": "Power Forward",
+                "age": 13
+              },{
+                "username": "Deepana",
+                "id": "5019",
+                "position": "Center ",
+                "age": 15
+              },{
+                "username": "Haritha",
+                "id": "5020",
+                "position": "Center ",
+                "age": 17
+              },{
+                "username": "Shreya",
+                "id": "5021",
+                "position": "shooting Guard",
+                "age": 15
+              }
+        ]
+    },
+    {"id": "team3",
+    "name": "Team 3",
+    "sport": "Baseball",
+    "players":
+        [
+            {
+                "username": "Rashmi",
+                "id": "5022",
+                "position": "Pitcher",
+                "age": 15
+              },{
+                "username": "Farhana",
+                "id": "5023",
+                "position": "Catcher ",
+                "age": 15
+              },{
+                "username": "Sahana",
+                "id": "5024",
+                "position": "First Baseman",
+                "age": 16
+              },{
+                "username": "Sanmathi",
+                "id": "5025",
+                "position": "Second Baseman",
+                "age": 16
+              },{
+                "username": "Prathika",
+                "id": "5026",
+                "position": "Third Baseman ",
+                "age": 15
+              },{
+                "username": "Pooja",
+                "id": "5027",
+                "position": "Shortstop",
+                "age": 17
+              },{
+                "username": "Lavanya",
+                "id": "5028",
+                "sport": "Baseball",
+                "position": "Left Fielder",
+                "age": 14
+              },{
+                "username": "Girisa",
+                "id": "5029",
+                "position": "Center Fielder",
+                "age": 14
+              },{
+                "username": "Indhu",
+                "id": "5030",
+                "position": "Right Fielder",
+                "age": 16
+              }
+        ]
+    },
+    {"id": "team4",
+    "name": "Team 4",
+    "sport": "Tennis",
+    "players":
+        [
+            {
+                "username": "Sharmi",
+                "id": "5031",
+                "position": "Tennis",
+                "age": 15
+              },{
+                "username": "Visnu",
+                "id": "5032",
+                "email": "visnu@gmail.com",
+                "position": "Tennis",
+                "age": 16
+              },{
+                "username": "Rohita",
+                "id": "5033",
+                "position": "Tennis",
+                "age": 15
+              },{
+                "username": "Sheela",
+                "id": "5034",
+                "position": "Tennis",
+                "age": 15
+              }
+        ]
+},
+{"id": "team5",
+"name": "Team 5",
+"sport": "Volleyball",
+"players":
+    [
+        {
+            "username": "Neha",
+            "id": "5035",
+            "position": "Left-side Hitter",
+            "age": 15
+          },{
+            "username": "Gaura",
+            "id": "5036",
+            "position": "Middle Blocker",
+            "age": 15
+          },{
+            "username": "Gautami",
+            "id": "5037",
+            "position": "Right-side Hitter",
+            "age": 15
+          },{
+            "username": "Harini",
+            "id": "5038",
+            "position": "Setter",
+            "age": 16
+          },{
+            "username": "Harsha",
+            "id": "5038",
+            "position": "Libero",
+            "age": 16
+          },{
+            "username": "Harshini",
+            "id": "5040",
+            "position": "Defensive Specialist",
+            "age": 16
+          }
+    ]
+},
+{"id": "team6",
+"name": "Team 6",
+"sport": "Hockey",
+"players":
+    [
+        {
+            "username": "Ilakkiya",
+            "id": "5041",
+            "position": "Goalkeeper",
+            "age": 15
+          },{
+            "username": "Indira",
+            "id": "5042",
+            "position": "Defenders",
+            "age": 16
+          },{
+            "username": "Iniya",
+            "id": "5043",
+            "position": "Midfielders ",
+            "age": 16
+          },{
+            "username": "Jamuna",
+            "id": "5044",
+            "position": "Forwards",
+            "age": 15
+          },{
+            "username": "Rithika",
+            "id": "5045",
+            "position": "Wingers",
+            "age": 16
+          },{
+            "username": "Kavya",
+            "id": "5046",
+            "position": "Center-Forward",
+            "age": 15
+          }
+    ]
+}
+    
   ]
   

@@ -62,7 +62,8 @@ function App() {
   return (
     <Router>
       <Routes>
-      <Route path="/profile" element={<Profile playerData={player1} />} />
+        <Route path="/profile" element={<Profile playerData={player1} />} />
+
       
         <Route path="/home" element={<Home />} />
         <Route path="/dash" element={<Dash />} />

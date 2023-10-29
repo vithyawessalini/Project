@@ -1,41 +1,27 @@
 import React, { useState } from 'react';
 import { useNavigate,Link } from 'react-router-dom';
+import adminData from '../json/admins';
 import Swal from 'sweetalert2';
 const Adminlog = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
 
     if (!username || !password) {
-      Swal.fire('Please fill in all fields','','warning'); // Show an alert instead of using the error state
+      Swal.fire('Please fill in all fields', '', 'error');
       return;
     }
+    const user = adminData.find((user) => user.username === username);
 
-    try {
-      const response = await fetch('/adminlog', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password }),
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        localStorage.setItem('token', data.token);
-        Swal.fire('Logged in Successfully','','success');
-  
-        // Use the navigate function to go to the admin's home page
-        navigate('/ahome');
-      } else {
-        Swal.fire('Invalid username or password', '', 'error');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      Swal.fire('An error occurred during login.', '', 'error');
+    if (user && user.password === password) {
+      localStorage.setItem('token', user.id); // Store the user ID as a token
+      Swal.fire('Logged in Successfully', '', 'success');
+      navigate('/ahome');
+    } else {
+      Swal.fire('Invalid username or password', '', 'error');
     }
   };
 

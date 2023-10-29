@@ -7,12 +7,12 @@ import { faPlus, faTrash } from '@fortawesome/free-solid-svg-icons'; // Import t
 import AddPlayerForm from '../components/AddPlayerForm';
 import Sidebar from '../components/Aside';
 import Header from '../components/Header';
-
+import playersData from '../json/players'; 
 function Cplayer() {
   const [selectedPlayer, setSelectedPlayer] = useState(null);
   const [isAddingPlayer, setIsAddingPlayer] = useState(false);
   const [playerId, setPlayerId] = useState(203);
-  const [players, setPlayers] = useState([]);
+  const [players, setPlayers] = useState(playersData); // Initialize players with the imported data
   const [deletePopupOpen, setDeletePopupOpen] = useState(false);
   const [playerToDeleteId, setPlayerToDeleteId] = useState('');
   const [isDeleteAlertVisible, setIsDeleteAlertVisible] = useState(false);
@@ -103,7 +103,7 @@ function Cplayer() {
       <div className="app-main">
         <Header />
         <div>
-          <Page title="Players list" style={{fontFamily: "Footlight MT Light"}}/>
+          <Page title="Players list" />
           <PlayerList players={players} onRowClick={handlePlayerClick} selectedPlayer={selectedPlayer} />
           {selectedPlayer && <PlayerDetails player={selectedPlayer} />}
           <div className="button-group">

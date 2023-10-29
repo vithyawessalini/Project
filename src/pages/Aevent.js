@@ -5,9 +5,12 @@ import Header from '../components/Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faEdit } from '@fortawesome/free-solid-svg-icons';
 import EventList from '../components/Reventlist'; // Import the EventList component
+import eventsData from '../json/events';
+
+
 import Swal from 'sweetalert2';
 function Cevents() {
-  const [events, setEvents] = useState([]);
+  const [events, setEvents] = useState(eventsData); 
   const [showForm, setShowForm] = useState(false);
   const [newEvent, setNewEvent] = useState({
     name: '',
@@ -189,26 +192,24 @@ function Cevents() {
   }, []);
 
   function formatDate(dateString) {
-    const date = new Date(dateString);
-    const day = date.getDate().toString().padStart(2, '0');
-    const monthNames = [
-      'Jan',
-      'Feb',
-      'Mar',
-      'Apr',
-      'May',
-      'Jun',
-      'Jul',
-      'Aug',
-      'Sep',
-      'Oct',
-      'Nov',
-      'Dec',
-    ];
-    const month = monthNames[date.getMonth()];
-    const year = date.getFullYear();
-    return `${day}-${month}-${year}`;
+    try {
+      if (dateString && dateString.$date) {
+        const date = new Date(dateString.$date);
+        if (isNaN(date.getTime())) {
+          return `Invalid Date Format: ${dateString.$date}`;
+        }
+        return date.toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+        });
+      }
+      return `Invalid Date Format: ${dateString}`;
+    } catch (error) {
+      return `Date Parsing Error: ${error.message}, Input: ${dateString}`;
+    }
   }
+  
 
   return (
     <div className="app">

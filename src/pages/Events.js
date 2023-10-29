@@ -3,46 +3,33 @@ import Page from '../components/Page';
 import Sidebar from '../components/SideBar';
 import Header from '../components/Header';
 import EventRegistrationForm from '../components/EventRegistrationForm'; // Import the registration form
-import Eventlist from '../components/Reventlist';
+import eventsData from '../json/events'; // Make sure the path to your JSON file is correct
 
 function formatDate(dateString) {
-  const date = new Date(dateString);
-  const day = date.getDate().toString().padStart(2, '0');
-  const monthNames = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec',
-  ];
-  const month = monthNames[date.getMonth()];
-  const year = date.getFullYear();
-  return `${day}-${month}-${year}`;
+  try {
+    if (dateString && dateString.$date) {
+      const date = new Date(dateString.$date);
+      if (isNaN(date.getTime())) {
+        return `Invalid Date Format: ${dateString.$date}`;
+      }
+      return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+      });
+    }
+    return `Invalid Date Format: ${dateString}`;
+  } catch (error) {
+    return `Date Parsing Error: ${error.message}, Input: ${dateString}`;
+  }
 }
 
-
 function Event() {
-  const [events, setEvents] = useState([]);
+  const [events, setEvents] = useState(eventsData);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [showRegistrationForm, setShowRegistrationForm] = useState(false);
 
-  useEffect(() => {
-    // Fetch events from the backend
-    fetch('http://localhost:3000/get-events')
-      .then((response) => response.json())
-      .then((data) => {
-        setEvents(data);
-      })
-      .catch((error) => console.error(error));
-  }, []);
-
+ 
   const handleRegistrationSubmit = (registrationData) => {
     // Handle registration submission here (e.g., send data to the backend)
     // You can use the registrationData object to send the user's registration data

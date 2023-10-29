@@ -3,17 +3,14 @@
 import Fside from '../components/Fside';
 import Fhead from '../components/Fhead';
 import React, { useState, useEffect } from 'react';
-
+import coachData from '../json/coaches.json'; 
 
   const Fcoach = () => {
-    const [selectedCoach, setSelectedCoach ] = useState(null);
+    const [selectedCoach, setSelectedCoach] = useState(null);
     const [coaches, setCoaches] = useState([]);
     useEffect(() => {
-      // Fetch coaches' data when the component mounts
-      fetch('http://localhost:3000/get-coaches')
-        .then((response) => response.json())
-        .then((data) => setCoaches(data))
-        .catch((error) => console.error('Error fetching coaches:', error));
+      // Set the coaches' data from the imported JSON
+      setCoaches(coachData);
     }, []);
   
     const handleCoachClick = (coachId) => {

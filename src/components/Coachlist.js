@@ -8,7 +8,6 @@ function CoachList({ coaches, selectedCoach, onRowClick }) {
           <tr>
             <th>ID</th>
             <th>Name</th>
-
           </tr>
         </thead>
         <tbody>
@@ -19,8 +18,7 @@ function CoachList({ coaches, selectedCoach, onRowClick }) {
               className={selectedCoach === coach ? 'selected-row' : ''}
             >
               <td>{coach.id}</td>
-              <td>{coach.name}</td>
-              
+              <td>{coach.firstName} {coach.lastName}</td> {/* Display first and last name */}
             </tr>
           ))}
         </tbody>

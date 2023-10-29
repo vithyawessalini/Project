@@ -5,6 +5,9 @@ import Sidebar from '../components/SideBar';
 import Header from '../components/Header';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 
+import practiceEventsData from '../json/practices'; // Import practice events JSON
+import eventsData from '../json/events'; // Import regular events JSON
+
 const localizer = momentLocalizer(moment, { culture: 'en', timezone: 'America/New_York' });
 
 const PracticeCalendar = () => {
@@ -13,30 +16,23 @@ const PracticeCalendar = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3000/get-practise-events')
-      .then((response) => response.json())
-      .then((practiceEvents) => {
-        // Fetch regular events from the server
-        fetch('http://localhost:3000/get-events')
-          .then((response) => response.json())
-          .then((regularEvents) => {
-            // Add a 'category' property to distinguish practice and regular events
-            const practiceEventsWithCategory = practiceEvents.map((event) => ({
-              ...event,
-              source: 'Practice',
-            }));
-            const regularEventsWithCategory = regularEvents.map((event) => ({
-              ...event,
-              source: 'Regular',
-            }));
+    // Combine practice and regular events into one array
+    const combinedEvents = [
+      ...practiceEventsData.map((event) => ({
+        ...event,
+        source: 'Practice',
+      })),
+      ...eventsData.map((event) => ({
+        ...event,
+        source: 'Regular',
+      })),
+    ];
 
-            // Combine practice and regular events into one array
-            const allEvents = [...practiceEventsWithCategory, ...regularEventsWithCategory];
-            setEvents(allEvents);
-          })
-          .catch((error) => console.error(error));
-      })
-      .catch((error) => console.error(error));
+    // Sort the combined events by date
+    combinedEvents.sort((a, b) => new Date(a.date.$date) - new Date(b.date.$date));
+
+    setPracticeEvents(practiceEventsData);
+    setEvents(combinedEvents);
   }, []);
 
   const handleEventClick = (event) => {
@@ -65,13 +61,17 @@ const PracticeCalendar = () => {
       <div className="app-main">
         <Header />
         <div>
-          <h1 style={{fontFamily: "Footlight MT Light"}}>Practice Calendar</h1>
+          <h1 style={{ fontFamily: "Footlight MT Light" }}>Practice Calendar</h1>
 
           <Calendar
             localizer={localizer}
             events={events}
-            startAccessor={(event) => moment(event.date + ' ' + event.startTime, 'YYYY-MM-DD HH:mm').toDate()}
-            endAccessor={(event) => moment(event.date + ' ' + event.endTime, 'YYYY-MM-DD HH:mm').toDate()}
+            startAccessor={(event) =>
+              moment(event.date.$date).toDate()
+            }
+            endAccessor={(event) =>
+              moment(event.date.$date).toDate()
+            }
             titleAccessor="name"
             style={{ height: 500 }}
             onSelectEvent={handleEventClick}
@@ -82,20 +82,17 @@ const PracticeCalendar = () => {
             {selectedEvent ? (
               <>
                 <h2>{selectedEvent.name}</h2>
-                <p>Date: {moment(selectedEvent.date).format('MMMM DD, YYYY')}</p>
+                <p>Date: {moment(selectedEvent.date.$date).format('MMMM DD, YYYY')}</p>
                 <p>
                   Time: {moment(selectedEvent.startTime, 'HH:mm').format('hh:mm A')} -{' '}
                   {moment(selectedEvent.endTime, 'HH:mm').format('hh:mm A')}
                 </p>
                 <p>Location: {selectedEvent.location}</p>
-                
-                {selectedEvent.source === 'Regular' ? null : (
-                  <p>Coach: {selectedEvent.coach}</p>
-                )}
+
+                {selectedEvent.source === 'Regular' ? null : <p>Coach: {selectedEvent.coach}</p>}
                 {selectedEvent.source === 'Practice' ? null : (
                   <p>Age category: {selectedEvent.category}</p>
                 )}
-               
               </>
             ) : (
               <>

@@ -1,12 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
   import moment from 'moment';
-  import practiseData from '../json/practise.json';
   import Header from '../components/Header';
   import Cside from '../components/Cside';
 import Swal from 'sweetalert2';
+import practiseData from '../json/practices';
 const Practise = () => {
-  const [practiseEvents, setPractiseEvents] = useState([]);
+  const [practiseEvents, setPractiseEvents] = useState(practiseData);
   const [newPractiseEvent, setNewPractiseEvent] = useState({
     name: '',
     date: '',
@@ -113,26 +113,8 @@ const Practise = () => {
       return;
     }
 
-    try {
-      const response = await fetch(`/cancel-practice-event/${selectedPractise._id}`, {
-        method: 'DELETE',
-      });
-
-      if (response.ok) {
-        // Show an alert
+   
         Swal.fire('Practice event canceled successfully');
-
-        // Clear the selected practice event
-        setSelectedPractise(null);
-
-        // Fetch the updated practice events
-        fetchPractiseEvents();
-      } else {
-        console.error('Failed to cancel practice event');
-      }
-    } catch (error) {
-      console.error(error);
-    }
   };
   return (
     <div>

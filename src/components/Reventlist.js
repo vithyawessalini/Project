@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from 'react';
-
+import registeredPlayersData from '../json/registeredplayers'; 
 function EventList({ eventId, onClose }) {
   const [registeredPlayers, setRegisteredPlayers] = useState([]);
 
   useEffect(() => {
-    // Fetch registered players for the event from the backend
-    fetch(`http://localhost:3000/get-registered-players?eventId=${eventId}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setRegisteredPlayers(data);
-      })
-      .catch((error) => console.error(error));
+    // Filter registered players based on the eventId prop
+    const filteredPlayers = registeredPlayersData.filter((player) => player.eventId.$oid === eventId.$oid);
+
+    setRegisteredPlayers(filteredPlayers);
   }, [eventId]);
 
   return (

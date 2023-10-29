@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import PlayerDetails from './Playerdetails'; // Import the PlayerDetails component
+import playersData from '../json/players'; // Import the JSON data
 
 function Playerlist() {
-  const [players, setPlayers] = useState([]);
+  const [players, setPlayers] = useState(playersData); // Initialize players with the imported data
   const [selectedPlayer, setSelectedPlayer] = useState(null);
 
   useEffect(() => {
@@ -22,8 +23,7 @@ function Playerlist() {
 
   const handleCloseDetails = () => {
     setSelectedPlayer(null);
-  };
-
+  }
   const handlePlayerAdded = () => {
     // Refresh the list of players after a player is added
     fetch('http://localhost:5000/playerslist')

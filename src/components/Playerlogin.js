@@ -2,42 +2,29 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import playerData from '../json/players';
 const Playerlog = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
 
     if (!username || !password) {
-      Swal.fire('Please fill in all fields','','error'); // Show an alert instead of using the error state
+      Swal.fire('Please fill in all fields', '', 'error');
       return;
     }
+    const user = playerData.find((user) => user.username === username);
 
-    try {
-      const response = await fetch('/playerlog', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password }),
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        localStorage.setItem('token', data.token);
-        Swal.fire('Logged in Successfully','','success');
-        navigate('/profile');
-      } else {
-        Swal.fire('Invalid username or password','','error'); // Show an alert for errors
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      Swal.fire('An error occurred during login.','','error'); // Show an alert for errors
+    if (user && user.password === password) {
+      localStorage.setItem('token', user.id); // Store the user ID as a token
+      Swal.fire('Logged in Successfully', '', 'success');
+      navigate('/profile');
+    } else {
+      Swal.fire('Invalid username or password', '', 'error');
     }
   };
-
 
   
   const containerStyle1 = {

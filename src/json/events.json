@@ -1,30 +1,118 @@
-[
-    {
-      "id": 1,
-      "name": "Football Match",
-      "date": "2023-09-27",
-      "startTime": "10:00",
-      "endTime": "12:00",
-      "location": "Stadium A",
-      "category": "15-18"
-    },
-    {
-      "id": 2,
-      "name": "Basketball Game",
-      "date": "2023-09-28",
-      "startTime": "8:30",
-      "endTime": "10:30",
-      "location": "Arena B",
-      "category": "15-18"
-    },
-    {
-      "id": 3,
-      "name": "Soccer Tournament",
-      "date": "2023-09-29",
-      "startTime": "7:45",
-      "endTime": "10:00",
-      "location": "Sports Complex",
-      "category": "15-18"
-    }
-  ]
-  
+[{
+  "_id": {
+    "$oid": "651c599b46b75cf4e4affb15"
+  },
+  "name": "Hockey Tournament",
+  "date": {
+    "$date": "2023-10-26"
+  },
+  "startTime": "06:00",
+  "endTime": "10:00",
+  "location": "Stefan ground,Erode",
+  "category": "15-18",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c59df46b75cf4e4affb21"
+  },
+  "name": "Football Tournament",
+  "date": {
+    "$date": "2023-10-05"
+  },
+  "startTime": "05:45",
+  "endTime": "10:45",
+  "location": "Nehru Ground,Erode",
+  "category": "13-17",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c5b5e17d83b5ee228b6b2"
+  },
+  "name": "Swimming ",
+  "date": {
+    "$date": "2023-10-12"
+  },
+  "startTime": "12:00",
+  "endTime": "13:00",
+  "location": "Nehru Ground,Erode",
+  "category": "13-19",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c5ba317d83b5ee228b6da"
+  },
+  "name": "Cricket",
+  "date": {
+    "$date": "2023-10-19"
+  },
+  "startTime": "16:00",
+  "endTime": "19:00",
+  "location": "VOC park,Erode",
+  "category": "13-18",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c5bf0c3edf9114021df5e"
+  },
+  "name": "Volleyball tournament",
+  "date": {
+    "$date": "2023-10-05"
+  },
+  "startTime": "05:00",
+  "endTime": "08:00",
+  "location": "VOC park,Erode",
+  "category": "13-17",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c5c6567e6067d8648763b"
+  },
+  "name": "Tennis",
+  "date": {
+    "$date": "2023-10-16"
+  },
+  "startTime": "07:00",
+  "endTime": "09:00",
+  "location": "VOC park,Erode",
+  "category": "13-18",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c66b35df1699f89a46407"
+  },
+  "name": "Volleyball tournament",
+  "date": {
+    "$date": "2023-11-10"
+  },
+  "startTime": "05:45",
+  "endTime": "08:45",
+  "location": "Stefan ground,Erode",
+  "category": "14-18",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c66f047bb27933b26cef5"
+  },
+  "name": "Baseball",
+  "date": {
+    "$date": "2023-11-07"
+  },
+  "startTime": "05:45",
+  "endTime": "08:45",
+  "location": "Nehru Ground,Erode",
+  "category": "13-19",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c6767826cc9a7de365338"
+  },
+  "name": "Basketball",
+  "date": {
+    "$date": "2023-11-24"
+  },
+  "startTime": "16:45",
+  "endTime": "18:45",
+  "location": "Nehru Ground,Erode",
+  "category": "14-15",
+  "__v": 0
+}]

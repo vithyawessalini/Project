@@ -47,15 +47,15 @@ const Dash = () => {
           <div className="dashboard">
             <div className="dashboard-box">
               <h2>Number of Events</h2>
-              <p>{numberOfEvents}</p>
+              <p>9</p>
             </div>
             <div className="dashboard-box">
               <h2>Number of Players</h2>
-              <p>{numberOfPlayers}</p>
+              <p>54</p>
             </div>
             <div className="dashboard-box">
               <h2>Number of Teams</h2>
-              <p>{numberOfTeams}</p>
+              <p>8</p>
             </div>
           </div>
         </Page>

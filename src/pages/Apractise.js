@@ -1,12 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
   import moment from 'moment';
-  import practiseData from '../json/practise.json';
   import Header from '../components/Header';
   import Cside from '../components/Aside';
-  import Swal from 'sweetalert2';
+import Swal from 'sweetalert2';
+import practiseData from '../json/practices';
 const Practise = () => {
-  const [practiseEvents, setPractiseEvents] = useState([]);
+  const [practiseEvents, setPractiseEvents] = useState(practiseData);
   const [newPractiseEvent, setNewPractiseEvent] = useState({
     name: '',
     date: '',
@@ -14,6 +14,7 @@ const Practise = () => {
     endTime: '',
     location: '',
     sport: '',
+    coach:'',
     description: '',
   });
   const dateFormat = 'YYYY-MM-DD';
@@ -80,6 +81,7 @@ const Practise = () => {
           endTime: '',
           location: '',
           sport: '',
+          coach:'',
           description: '',
         });
   
@@ -107,7 +109,7 @@ const Practise = () => {
     
   const handleCancelPractise = async () => {
     if (!selectedPractise) {
-      Swal.fire('Please select a practice event to cancel.','','error');
+      alert('Please select a practice event to cancel.');
       return;
     }
 
@@ -118,7 +120,7 @@ const Practise = () => {
 
       if (response.ok) {
         // Show an alert
-        Swal.fire('Practice event canceled successfully','','warning');
+        Swal.fire('Practice event canceled successfully');
 
         // Clear the selected practice event
         setSelectedPractise(null);
@@ -147,7 +149,6 @@ const Practise = () => {
                 name="name"
                 value={newPractiseEvent.name}
                 onChange={handleInputChange}
-             
               />
             </label>
             <label>
@@ -196,6 +197,16 @@ const Practise = () => {
                 type="text"
                 name="sport"
                 value={newPractiseEvent.sport}
+                onChange={handleInputChange}
+             
+              />
+            </label>
+            <label>
+              Coach:
+              <input
+              type="text"
+                name="coach"
+                value={newPractiseEvent.coach}
                 onChange={handleInputChange}
              
               />
@@ -250,6 +261,7 @@ const Practise = () => {
 
                 <p>Location: {selectedPractise.location}</p>
                 <p>Sport: {selectedPractise.sport}</p>
+                <p>Coach: {selectedPractise.coach}</p>
                 <p>Description: {selectedPractise.description}</p>
                 <br></br>
                 <button type="button" onClick={handleCancelPractise}>

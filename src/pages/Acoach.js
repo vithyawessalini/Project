@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import coachesData from '../json/coach.json';
+import coachesData from '../json/coaches';
 import Fside from '../components/Aside';
 import Fhead from '../components/Header';
 import CoachForm from '../components/CoachForm';
@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 const Acoach = () => {
-  const [coaches, setCoaches] = useState([]);
+  const [coaches, setCoaches] = useState(coachesData); 
   const [showAddForm, setShowAddForm] = useState(false);
   const [selectedCoach, setSelectedCoach] = useState(null);
 

@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "651c328aa8ca5fae9b862945"
+  },
+  "username": "Yaksha",
+  "email": "yaksha@gmail.com",
+  "password": "Yaksha@123",
+  "contactNumber": "9876543211",
+  "firstName": "Yaksha",
+  "lastName": "R",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c32bba8ca5fae9b862947"
+  },
+  "username": "Aadinath",
+  "email": "aadinath@gmail.com",
+  "password": "Aadinath@123",
+  "contactNumber": "9876543212",
+  "firstName": "Aadinath",
+  "lastName": "K",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c32f7a8ca5fae9b862949"
+  },
+  "username": "Vaanika",
+  "email": "vaanika@gmail.com",
+  "password": "Vaanika@123",
+  "contactNumber": "9876543213",
+  "firstName": "Vaanika",
+  "lastName": "S",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c33a7a8ca5fae9b86294b"
+  },
+  "username": "Ranjudeep",
+  "email": "ranjudeep@gmail.com",
+  "password": "Ranjudeep@123",
+  "contactNumber": "9876543214",
+  "firstName": "Ranjudeep",
+  "lastName": "D",
+  "__v": 0
+}]

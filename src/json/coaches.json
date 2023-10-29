@@ -1,0 +1,113 @@
+[{
+  "_id": {
+    "$oid": "651c34afa8ca5fae9b86294e"
+  },
+  "username": "Rashmi",
+  "id": "10001",
+  "email": "rashmi@gmail.com",
+  "password": "Rashmi@123",
+  "contactNumber": "9876543221",
+  "firstName": "Rashmi",
+  "lastName": "R",
+  "sport": "Basketball",
+  "experience": "11 years",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c3542a8ca5fae9b862951"
+  },
+  "username": "Ratnabala",
+  "id": "10002",
+  "email": "ratnabala@gmail.com",
+  "password": "Ratnabala@123",
+  "contactNumber": "9876543222",
+  "firstName": "Ratnabala",
+  "lastName": "V",
+  "sport": "Football",
+  "experience": "5 years",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c359ba8ca5fae9b862953"
+  },
+  "username": "Nadia",
+  "id": "10003",
+  "email": "nadia@gmail.com",
+  "password": "Nadia@123",
+  "contactNumber": "9876543223",
+  "firstName": "Nadia",
+  "lastName": "M",
+  "sport": "Tennis",
+  "experience": "8 years",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c38a8a8ca5fae9b862955"
+  },
+  "username": "Ilango",
+  "id": "10004",
+  "email": "ilango@gmail.com",
+  "password": "Ilango@123",
+  "contactNumber": "9876543224",
+  "firstName": "Ilango",
+  "lastName": "P",
+  "sport": "Baseball",
+  "experience": "5 years",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c3906a8ca5fae9b862957"
+  },
+  "username": "Gautami",
+  "id": "10005",
+  "email": "gautami@gmail.com",
+  "password": "Gautami@123",
+  "contactNumber": "9876543225",
+  "firstName": "Gautami",
+  "lastName": "K",
+  "sport": "Volleyball",
+  "experience": "9 years",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c3997a8ca5fae9b862959"
+  },
+  "username": "Daya",
+  "id": "10006",
+  "email": "daya@gmail.com",
+  "password": "Daya@123",
+  "contactNumber": "9876543226",
+  "firstName": "Daya",
+  "lastName": "L",
+  "sport": "Hockey",
+  "experience": "3 years",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c3a0aa8ca5fae9b86295b"
+  },
+  "username": "Bala",
+  "id": "10007",
+  "email": "bala@gmail.com",
+  "password": "Bala@123",
+  "contactNumber": "9876543227",
+  "firstName": "Bala",
+  "lastName": "C",
+  "sport": "Cricket",
+  "experience": "7 years",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c3a5fa8ca5fae9b86295d"
+  },
+  "username": "Aanandi",
+  "id": "10008",
+  "email": "aanandi@gmail.com",
+  "password": "Aanandi@123",
+  "contactNumber": "9876543228",
+  "firstName": "Aanandi",
+  "lastName": "R",
+  "sport": "Swimming",
+  "experience": "4 years",
+  "__v": 0
+}]

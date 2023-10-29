@@ -1,0 +1,87 @@
+[{
+  "_id": {
+    "$oid": "651c5a9a17d83b5ee228b69c"
+  },
+  "name": "Evening practise",
+  "date": {
+    "$date": "2023-10-14"
+  },
+  "startTime": "16:45",
+  "endTime": "18:00",
+  "location": "Stefan ground,Erode",
+  "sport": "Volleyball",
+  "description": "Arrive on time",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651c5aea17d83b5ee228b6a5"
+  },
+  "name": "Evening practise",
+  "date": {
+    "$date": "2023-10-04"
+  },
+  "startTime": "16:30",
+  "endTime": "18:30",
+  "location": "Stefan ground,Erode",
+  "sport": "Volleyball",
+  "description": "Arrive on time",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651ce50310767cb47dedebde"
+  },
+  "name": "Morning practise",
+  "date": {
+    "$date": "2023-10-06"
+  },
+  "startTime": "05:30",
+  "endTime": "08:00",
+  "location": "VOC park,Erode",
+  "sport": "Baseketball",
+  "description": "Arrive at time",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "651ce5e010767cb47dedebe1"
+  },
+  "name": "Evening practise",
+  "date": {
+    "$date": "2023-10-06"
+  },
+  "startTime": "16:30",
+  "endTime": "18:30",
+  "location": "Stefan ground,Erode",
+  "sport": "Volleyball",
+  "description": "Arrive at time",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "652644d09319db767be91021"
+  },
+  "name": "Evening practise",
+  "date": {
+    "$date": "2023-10-13"
+  },
+  "startTime": "16:20",
+  "endTime": "19:00",
+  "location": "VOC park,Erode",
+  "sport": "Hockey",
+  "coach": "Daya",
+  "description": "Arrive at time",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "652662ffa7ca18511463e1d3"
+  },
+  "name": "morning practise",
+  "date": {
+    "$date": "2023-10-20"
+  },
+  "startTime": "14:30",
+  "endTime": "19:30",
+  "location": "Nehru Ground,Erode",
+  "sport": "Baseketball",
+  "coach": "Rashmi",
+  "description": "Arrive at time",
+  "__v": 0
+}]
